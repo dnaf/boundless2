@@ -1,0 +1,350 @@
+<html>
+	<head>
+		<title>vsauce</title>
+		<style>
+			.stripeset {
+				position: absolute;
+				animation: move-rainbow 1s infinite linear;
+			}
+
+			.stripes {
+				animation:  hover 1.6s infinite linear, pumpin 0.4s infinite;
+				position: absolute;
+			}
+
+			.stripe {
+				background-color: #000000;
+				margin: 0;
+				padding: 0;
+				height: 1920px;
+				width: 64px;
+				position: absolute;
+				display: inline-block;
+				top: 256px;
+				bottom: 0;
+				transform: skew(-20deg, 20deg);
+				z-index: -100;
+			}
+
+			.col1 {
+				background-color: #FF0000;
+				left: 0;
+			}
+			.col2 {
+				background-color: #FF7F00;
+				left: 64px;
+			}
+			.col3 {
+				background-color: #FFFF00;
+				left: 128px;
+			}
+			.col4 {
+				background-color: #7FFF00;
+				left: 192px;
+			}
+			.col5 {
+				background-color: #00FF00;
+				left: 256px;
+			}
+			.col6 {
+				background-color: #00FF7F;
+				left: 320px;
+			}
+			.col7 {
+				background-color: #00FFFF;
+				left: 384px;
+			}
+			.col8 {
+				background-color: #007FFF;
+				left: 448px;
+			}
+			.col9 {
+				background-color: #0000FF;
+				left: 512px;
+			}
+			.col10 {
+				background-color: #7F00FF;
+				left: 576px;
+			}
+			.col11 {
+				background-color: #FF00FF;
+				left: 640px;
+			}
+			.col12 {
+				background-color: #FF007F;
+				left: 704px;
+			}
+
+			body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				animation: rainbow-back 1.6s infinite ease;
+			}
+
+			.centertext {
+				z-index: 100;
+				color: #FFFFFF;
+				position: absolute;
+				width: 8em;
+				top: Calc(50% - 64px);
+				left: Calc(50% - 384px);
+				mix-blend-mode: difference;
+			}
+
+			span.letter {
+				z-index: 100;
+				animation: floating-circle 0.8s linear infinite;
+				position: absolute;
+				display: block;
+				font-size: 8em;
+				font-weight: bold;
+				font-family: 'Comic Sans MS';
+			}
+
+			.letter1 {
+				animation-delay: 0.1s !important;
+				left: 0;
+			}
+			.letter2 {
+				animation-delay: 0.2s !important;
+				left: 96px;
+			}
+			.letter3 {
+				animation-delay: 0.3s !important;
+				left: 192px;
+			}
+			.letter4 {
+				animation-delay: 0.4s !important;
+				left: 288px;
+			}
+			.letter5 {
+				animation-delay: 0.5s !important;
+				left: 480px;
+			}
+			.letter6 {
+				animation-delay: 0.6s !important;
+				left: 576px;
+			}
+			.letter7 {
+				animation-delay: 0.7s !important;
+				left: 672px;
+			}
+
+			h1 {
+				position: absolute;
+				animation: aaa 1s linear infinite;
+				font-family: 'Arial';
+				font-weight: bold;
+				letter-spacing: 0.1em;
+				font-size: 128px;
+				top: 0;
+				color: #FFFFFF;
+				margin: 0;
+				z-index: -1;
+			}
+
+			.aaa2 {
+				top: 1em;
+			}
+
+			.aaa3 {
+				top: 2em;
+			}
+
+			.aaa4 {
+				top: 3em;
+			}
+
+			@keyframes rainbow-back {
+				0% {
+					background-color: hsl(0, 100%, 50%);
+				}
+				12% {
+					background-color: hsl(45, 100%, 50%);
+				}
+				25% {
+					background-color: hsl(90, 100%, 50%);
+				}
+				37% {
+					background-color: hsl(135, 100%, 50%);
+				}
+				50% {
+					background-color: hsl(180, 100%, 50%);
+				}
+				62% {
+					background-color: hsl(225, 100%, 50%);
+				}
+				75% {
+					background-color: hsl(270, 100%, 50%);
+				}
+				87% {
+					background-color: hsl(315, 100%, 50%);
+				}
+				100% {
+					background-color: hsl(360, 100%, 50%)
+				}
+			}
+
+			@keyframes move-rainbow {
+				0% {
+					transform: translateX(0%)
+				}
+				100% {
+					transform: translateX(100%)
+				}
+			}
+
+			@keyframes pumpin {
+				0% {
+					transform: scale(1, 1);
+				}
+				50% {
+					transform: scale(2, 2);
+				}
+				100% {
+					transform: scale(1, 1);
+				}
+			}
+
+			@keyframes hover {
+				0% {
+					left: 0px;
+				}
+				100% {
+					left: 768px;
+				}
+			}
+
+			@keyframes aaa {
+				0% {
+					left: 0%;
+				}
+				100% {
+					left: -50%;
+				}
+			}
+
+			@keyframes floating-circle {
+				0% {
+					transform: translate(0px, 64px);
+				}
+				17% {
+					transform: translate(45px, 45px);
+				}
+				25% {
+					transform: translate(64px, 0px);
+				}
+				37% {
+					transform: translate(45px, -45px);
+				}
+				50% {
+					transform: translate(0px, -64px);
+				}
+				62% {
+					transform: translate(-45px, -45px);
+				}
+				75% {
+					transform: translate(-64px, 0px);
+				}
+				87% {
+					transform: translate(-45px, 45px)
+				}
+				100% {
+					transform: translate(0, 64px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<audio src="./nightcorex3.mp3" autoplay loop></audio>
+		<div class="stripes">
+			<div class="stripeset">
+				<div class="stripe col1"></div>
+				<div class="stripe col2"></div>
+				<div class="stripe col3"></div>
+				<div class="stripe col4"></div>
+				<div class="stripe col5"></div>
+				<div class="stripe col6"></div>
+				<div class="stripe col7"></div>
+				<div class="stripe col8"></div>
+				<div class="stripe col9"></div>
+				<div class="stripe col10"></div>
+				<div class="stripe col11"></div>
+				<div class="stripe col12"></div>
+			</div>
+			<div class="stripeset" style="margin-left: -768px">
+				<div class="stripe col1"></div>
+				<div class="stripe col2"></div>
+				<div class="stripe col3"></div>
+				<div class="stripe col4"></div>
+				<div class="stripe col5"></div>
+				<div class="stripe col6"></div>
+				<div class="stripe col7"></div>
+				<div class="stripe col8"></div>
+				<div class="stripe col9"></div>
+				<div class="stripe col10"></div>
+				<div class="stripe col11"></div>
+				<div class="stripe col12"></div>
+			</div>
+			<div class="stripeset" style="margin-left: 768px">
+				<div class="stripe col1"></div>
+				<div class="stripe col2"></div>
+				<div class="stripe col3"></div>
+				<div class="stripe col4"></div>
+				<div class="stripe col5"></div>
+				<div class="stripe col6"></div>
+				<div class="stripe col7"></div>
+				<div class="stripe col8"></div>
+				<div class="stripe col9"></div>
+				<div class="stripe col10"></div>
+				<div class="stripe col11"></div>
+				<div class="stripe col12"></div>
+			</div>
+			<div class="stripeset" style="margin-left: -1536px">
+				<div class="stripe col1"></div>
+				<div class="stripe col2"></div>
+				<div class="stripe col3"></div>
+				<div class="stripe col4"></div>
+				<div class="stripe col5"></div>
+				<div class="stripe col6"></div>
+				<div class="stripe col7"></div>
+				<div class="stripe col8"></div>
+				<div class="stripe col9"></div>
+				<div class="stripe col10"></div>
+				<div class="stripe col11"></div>
+				<div class="stripe col12"></div>
+			</div>
+			<div class="stripeset" style="margin-left: 1536px">
+				<div class="stripe col1"></div>
+				<div class="stripe col2"></div>
+				<div class="stripe col3"></div>
+				<div class="stripe col4"></div>
+				<div class="stripe col5"></div>
+				<div class="stripe col6"></div>
+				<div class="stripe col7"></div>
+				<div class="stripe col8"></div>
+				<div class="stripe col9"></div>
+				<div class="stripe col10"></div>
+				<div class="stripe col11"></div>
+				<div class="stripe col12"></div>
+			</div>
+		</div>
+		<div class="centertext">
+			<span class="letter letter1">y</span>
+			<span class="letter letter2">o</span>
+			<span class="letter letter3">u</span>
+			<span class="letter letter4">r</span>
+			<span class="letter letterspace"></span>
+			<span class="letter letter5">g</span>
+			<span class="letter letter6">a</span>
+			<span class="letter letter7">y</span>
+		</div>
+		<h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+		<h1 class="aaa2">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+		<h1 class="aaa3">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+		<h1 class="aaa4">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+	</body>
+</html>
